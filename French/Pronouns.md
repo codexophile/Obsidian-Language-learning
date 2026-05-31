@@ -1,10 +1,10 @@
 |          |                |                |         |           |        |          |          |
 | -------- | -------------- | -------------- | ------- | --------- | ------ | -------- | -------- |
-|          | <              | <              | <       | <         | object | <        |          |
-| number   | person         | <              | subject | reflexive | direct | indirect | stressed |
+| number   | person         | <              | subject | reflexive | object | <        | stressed |
+| ^        | ^              | <              | ^       | ^         | direct | indirect | ^        |
 | singular | 1<sup>st</sup> | <              | je      | me        | <      | <        | moi      |
 | ^        | 2<sup>nd</sup> | inf.           | tu      | te        | <      | <        | toi      |
-| ^        | ^              | f.             | Vous    | <         | <      | <        | <        |
+| ^        | ^              | f.             | vous    | <         | <      | <        | <        |
 | ^        | 3<sup>rd</sup> | masc.          | il      | se        | le/en  | lui/y    | lui      |
 | ^        | ^              | fem.           | elle    | ^         | la/en  | ^        | elle     |
 | ^        | ^              | indef.         | on      | ^         | en     | ^        | soi      |
