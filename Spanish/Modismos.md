@@ -32,12 +32,10 @@
 | muchas manos en la olla echan a perder el guiso | too many cooks spoil the broth                              |
 | mucho ruido y pocas nueces                      | all talk and no action                                      |
 | no hay mal que dure cien años                   | nothing lasts forever                                       |
-| no hay mal que dure cien años                   | nothing lasts forever                                       |
 | no hay rosa sin espinas                         | every rose has its thorn                                    |
 | no se puede servir a dios y al diablo           | no man can serve two masters                                |
 | no se puede tener todo                          | you can’t have your cake and eat it too                     |
 | no todo que brilla es oro                       | not everything that glitters is gold                        |
-| ojos que no ven, corazón que no siente          | out of sight, out of mind                                   |
 | ojos que no ven, corazón que no siente          | out of sight, out of mind                                   |
 | quien mucho abarca poco aprieta                 | don’t bite off more than you can chew                       |
 | se fueron con la casa a cuestas                 | they took everything but the kitchen sink                   |
