@@ -1,186 +1,275 @@
+
 <style>
-  .conj-root {
-    padding: 1.5rem;
-    font-family: var(--font-sans);
+  :root {
+    --bg: #0a0a0a;
+    --cell-bg: #111;
+    --border: #2a2a2a;
+    --header: #f0f0f0;
+    --text: #e0e0e0;
+    --muted: #888;
+    --accent-ar: #c8a96e;
+    --accent-er: #e05a5a;
+    --accent-ir: #7eb8d4;
+    --inner-bg: #1a1a1a;
+    --inner-border: #333;
   }
-  .main-table {
-    width: 100%;
-    border-collapse: collapse;
+
+  .wrap {
+    background: var(--bg);
+    padding: 2rem;
+    font-family: 'Georgia', serif;
+    min-height: 300px;
   }
-  .main-table td {
-    padding: 10px 14px;
-    border: 0.5px solid var(--color-border-secondary);
-    vertical-align: middle;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border);
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
   }
-  .pronoun {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--color-text-primary);
-    text-align: center;
-    width: 90px;
-    background: var(--color-background-secondary);
-  }
-  .inner-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .inner-table th {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--color-text-secondary);
-    text-align: center;
-    padding: 3px 8px 5px;
-    border-bottom: 0.5px solid var(--color-border-tertiary);
-    letter-spacing: 0.04em;
-  }
-  .inner-table th.er-ir {
-    color: #E24B4A;
-  }
-  .inner-table td {
-    font-size: 15px;
-    text-align: center;
-    padding: 6px 10px;
-    border: none;
-    color: var(--color-text-primary);
-    border: 0.5px solid var(--color-border-tertiary);
-  }
-  .inner-table tr:first-child td { border-top: none; }
-  .inner-table tr:last-child td { border-bottom: none; }
-  .inner-table td:first-child { border-left: none; }
-  .inner-table td:last-child { border-right: none; }
-  .pret { background: #E6F1FB; color: #0C447C; }
-  .imp { background: #EAF3DE; color: #27500A; }
-  @media (prefers-color-scheme: dark) {
-    .pret { background: #0C447C; color: #B5D4F4; }
-    .imp { background: #27500A; color: #C0DD97; }
-  }
-  .legend {
+
+  .cell {
+    background: var(--cell-bg);
+    padding: 1.25rem 1.5rem;
     display: flex;
-    gap: 16px;
-    margin-bottom: 1rem;
-    font-size: 12px;
-    color: var(--color-text-secondary);
+    gap: 1rem;
     align-items: center;
   }
-  .legend-dot {
-    width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 4px;
+
+  .pronoun {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--header);
+    min-width: 72px;
+    letter-spacing: 0.03em;
   }
+
+  .endings-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .endings-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+
+  .endings-header span {
+    font-size: 0.65rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: 'Courier New', monospace;
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+
+  .label-ar { color: var(--accent-ar); }
+  .label-er { color: var(--accent-er); }
+  .label-ir { color: var(--accent-ir); }
+
+  .ending-row {
+    display: grid;
+    gap: 4px;
+  }
+
+  .two-col { grid-template-columns: 1fr 1fr; }
+  .three-col { grid-template-columns: 1fr 1fr 1fr; }
+
+  .ending {
+    background: var(--inner-bg);
+    border: 1px solid var(--inner-border);
+    border-radius: 3px;
+    padding: 0.45rem 0.5rem;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text);
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.02em;
+  }
+
+  .tense-label {
+    font-size: 0.62rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .divider-row {
+    grid-column: 1 / -1;
+    height: 0;
+  }
+
+  .legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.08em;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .dot-ar { background: var(--accent-ar); }
+  .dot-er { background: var(--accent-er); }
+  .dot-ir { background: var(--accent-ir); }
+
+  .legend-item span:last-child { color: var(--muted); }
 </style>
-<h2 class="sr-only">Spanish past tense conjugation table showing preterite and imperfect forms for all pronouns</h2>
-<div class="conj-root">
+
+<div class="wrap">
+  <h2 class="sr-only">Spanish past tense conjugation endings table showing preterite and imperfect forms for -ar, -er, and -ir verbs across all pronouns</h2>
+
   <div class="legend">
-    <span><span class="legend-dot" style="background:#378ADD"></span>preterite</span>
-    <span><span class="legend-dot" style="background:#639922"></span>imperfect</span>
+    <div class="legend-item"><div class="dot dot-ar"></div><span style="color:#c8a96e">-ar</span></div>
+    <div class="legend-item"><div class="dot dot-er"></div><span style="color:#e05a5a">-er</span></div>
+    <div class="legend-item"><div class="dot dot-ir"></div><span style="color:#7eb8d4">-ir</span></div>
   </div>
-  <table class="main-table">
-    <tr>
-      <td class="pronoun">yo</td>
-      <td>
-        <table class="inner-table">
-          <tr>
-            <th>ar</th>
-            <th>er / ir</th>
-          </tr>
-          <tr>
-            <td class="pret">é</td>
-            <td class="pret">í</td>
-          </tr>
-          <tr>
-            <td class="imp">aba</td>
-            <td class="imp">ía</td>
-          </tr>
-        </table>
-      </td>
-      <td class="pronoun">tú</td>
-      <td>
-        <table class="inner-table">
-          <tr>
-            <th>ar</th>
-            <th>er / ir</th>
-          </tr>
-          <tr>
-            <td class="pret">aste</td>
-            <td class="pret">iste</td>
-          </tr>
-          <tr>
-            <td class="imp">abas</td>
-            <td class="imp">ías</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td class="pronoun">él</td>
-      <td>
-        <table class="inner-table">
-          <tr>
-            <th>ar</th>
-            <th>er / ir</th>
-          </tr>
-          <tr>
-            <td class="pret">ó</td>
-            <td class="pret">ió</td>
-          </tr>
-          <tr>
-            <td class="imp">aba</td>
-            <td class="imp">ía</td>
-          </tr>
-        </table>
-      </td>
-      <td class="pronoun">vosotros</td>
-      <td>
-        <table class="inner-table">
-          <tr>
-            <th>ar</th>
-            <th>er / ir</th>
-          </tr>
-          <tr>
-            <td class="pret">asteis</td>
-            <td class="pret">isteis</td>
-          </tr>
-          <tr>
-            <td class="imp">abais</td>
-            <td class="imp">íais</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td class="pronoun">nosotros</td>
-      <td>
-        <table class="inner-table">
-          <tr>
-            <th>ar</th>
-            <th class="er-ir">er</th>
-            <th>ir</th>
-          </tr>
-          <tr>
-            <td class="pret">amos</td>
-            <td class="pret" colspan="2">imos</td>
-          </tr>
-          <tr>
-            <td class="imp">ábamos</td>
-            <td class="imp" colspan="2">íamos</td>
-          </tr>
-        </table>
-      </td>
-      <td class="pronoun">ellos</td>
-      <td>
-        <table class="inner-table">
-          <tr>
-            <th>ar</th>
-            <th>er / ir</th>
-          </tr>
-          <tr>
-            <td class="pret">aron</td>
-            <td class="pret">ieron</td>
-          </tr>
-          <tr>
-            <td class="imp">aban</td>
-            <td class="imp">ían</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+
+  <div class="grid">
+
+    <!-- yo -->
+    <div class="cell">
+      <div class="pronoun">yo</div>
+      <div class="endings-wrap">
+        <div class="endings-header">
+          <span class="label-ar">-ar</span>
+          <span class="label-er label-ir">-er / -ir</span>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">é</div>
+          <div class="ending">í</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">aba</div>
+          <div class="ending">ía</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="tense-label">pretérito</div>
+          <div class="tense-label">pretérito</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="tense-label">imperfecto</div>
+          <div class="tense-label">imperfecto</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tú -->
+    <div class="cell">
+      <div class="pronoun">tú</div>
+      <div class="endings-wrap">
+        <div class="endings-header">
+          <span class="label-ar">-ar</span>
+          <span class="label-er label-ir">-er / -ir</span>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">aste</div>
+          <div class="ending">iste</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">abas</div>
+          <div class="ending">ías</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- él -->
+    <div class="cell">
+      <div class="pronoun">él</div>
+      <div class="endings-wrap">
+        <div class="endings-header">
+          <span class="label-ar">-ar</span>
+          <span class="label-er label-ir">-er / -ir</span>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">ó</div>
+          <div class="ending">ió</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">aba</div>
+          <div class="ending">ía</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- vosotros -->
+    <div class="cell">
+      <div class="pronoun">vosotros</div>
+      <div class="endings-wrap">
+        <div class="endings-header">
+          <span class="label-ar">-ar</span>
+          <span class="label-er label-ir">-er / -ir</span>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">asteis</div>
+          <div class="ending">isteis</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">abais</div>
+          <div class="ending">íais</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- nosotros -->
+    <div class="cell">
+      <div class="pronoun">nosotros</div>
+      <div class="endings-wrap">
+        <div class="endings-header">
+          <span class="label-ar">-ar</span>
+          <span class="label-er" style="color:var(--accent-er)">-er</span>
+          <span class="label-ir">-ir</span>
+        </div>
+        <div class="ending-row three-col">
+          <div class="ending">amos</div>
+          <div class="ending" style="border-color:#3a1a1a">imos</div>
+          <div class="ending">imos</div>
+        </div>
+        <div class="ending-row three-col">
+          <div class="ending">ábamos</div>
+          <div class="ending" style="grid-column: 2 / 4; border-color:#3a1a1a">íamos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ellos -->
+    <div class="cell">
+      <div class="pronoun">ellos</div>
+      <div class="endings-wrap">
+        <div class="endings-header">
+          <span class="label-ar">-ar</span>
+          <span class="label-er label-ir">-er / -ir</span>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">aron</div>
+          <div class="ending">ieron</div>
+        </div>
+        <div class="ending-row two-col">
+          <div class="ending">aban</div>
+          <div class="ending">ían</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
