@@ -20,4 +20,8 @@
     background-color: rgb(45, 45, 173) !important;
     color: white !important;
   }
+  .left-aligned,
+  [class='.left-aligned'] {
+    text-align: left !important;
+  }
 }
