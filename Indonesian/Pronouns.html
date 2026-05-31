@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pronouns — Formal vs Informal</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #1a1815;
+      --surface: #2a2622;
+      --surface-alt: #3a3632;
+      --text: #f5f1ee;
+      --muted: #a89f93;
+      --border: #4a4540;
+      --accent: #d4a574;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: Segoe UI, Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #2a2622 0, var(--bg) 48%, #141210 100%);
+      color: var(--text)
+    }
+
+    .page {
+      max-width: 900px;
+      width: min(900px, 100%);
+      padding: 32px 20px 48px
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em
+    }
+
+    .pronoun-card {
+      background: rgba(42, 38, 34, 0.82);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(74, 69, 64, 0.85);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4)
+    }
+
+    .pronoun-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1fr
+    }
+
+    .cell {
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      min-width: 0
+    }
+
+    .cell:last-child {
+      border-right: 0
+    }
+
+    .head {
+      background: linear-gradient(180deg, var(--surface), var(--surface-alt));
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      color: var(--muted)
+    }
+
+    .person {
+      font-weight: 600;
+      color: var(--accent)
+    }
+
+    .value {
+      font-size: 1rem
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      font-weight: 500;
+      margin-left: 6px;
+    }
+
+    .span-two {
+      grid-column: span 2
+    }
+
+    /* .pronoun-grid .cell:nth-last-child(-n + 3) {
+      border-bottom: 0
+    } */
+
+    @media (max-width: 720px) {
+      .pronoun-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cell {
+        border-right: 0
+      }
+
+      .head {
+        display: none
+      }
+
+      .person::before {
+        content: attr(data-label) ": ";
+        display: inline;
+        color: var(--muted);
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: 600
+      }
+
+      .span-two {
+        grid-column: auto
+      }
+
+      .pronoun-grid .cell:nth-last-child(-n + 3) {
+        border-bottom: 1px solid var(--border)
+      }
+
+      .pronoun-grid .cell:last-child {
+        border-bottom: 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <h1>Pronouns</h1>
+    <section class="pronoun-card" aria-label="Pronouns formal versus informal comparison">
+      <div class="pronoun-grid" role="table" aria-label="Pronouns comparison">
+        <div class="cell head" role="columnheader">Person</div>
+        <div class="cell head" role="columnheader">Formal</div>
+        <div class="cell head" role="columnheader">Informal</div>
+
+        <div class="cell person" role="rowheader" data-label="Person">1st person (singular)</div>
+        <div class="cell value" role="cell">saya</div>
+        <div class="cell value" role="cell">aku</div>
+
+        <div class="cell person" role="rowheader" data-label="Person"></div>
+        <div class="cell value span-two" role="cell">kita <span>incl.</span>, kami <span>excl.</span></div>
+
+        <div class="cell person" role="rowheader" data-label="Person">2nd person (singular)</div>
+        <div class="cell value" role="cell">anda</div>
+        <div class="cell value" role="cell">kamu</div>
+
+        <div class="cell person" role="rowheader" data-label="Person"></div>
+        <div class="cell value" role="cell">anda sekalian</div>
+        <div class="cell value" role="cell">kalian</div>
+
+        <div class="cell person" role="rowheader" data-label="Person">3rd person (singular)</div>
+        <div class="cell value" role="cell">beliau</div>
+        <div class="cell value" role="cell">dia</div>
+
+        <div class="cell person" role="rowheader" data-label="Person"></div>
+        <div class="cell value span-two" role="cell">mereka</div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

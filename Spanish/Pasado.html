@@ -1,0 +1,186 @@
+<style>
+  .conj-root {
+    padding: 1.5rem;
+    font-family: var(--font-sans);
+  }
+  .main-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .main-table td {
+    padding: 10px 14px;
+    border: 0.5px solid var(--color-border-secondary);
+    vertical-align: middle;
+  }
+  .pronoun {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    text-align: center;
+    width: 90px;
+    background: var(--color-background-secondary);
+  }
+  .inner-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .inner-table th {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 3px 8px 5px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    letter-spacing: 0.04em;
+  }
+  .inner-table th.er-ir {
+    color: #E24B4A;
+  }
+  .inner-table td {
+    font-size: 15px;
+    text-align: center;
+    padding: 6px 10px;
+    border: none;
+    color: var(--color-text-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+  }
+  .inner-table tr:first-child td { border-top: none; }
+  .inner-table tr:last-child td { border-bottom: none; }
+  .inner-table td:first-child { border-left: none; }
+  .inner-table td:last-child { border-right: none; }
+  .pret { background: #E6F1FB; color: #0C447C; }
+  .imp { background: #EAF3DE; color: #27500A; }
+  @media (prefers-color-scheme: dark) {
+    .pret { background: #0C447C; color: #B5D4F4; }
+    .imp { background: #27500A; color: #C0DD97; }
+  }
+  .legend {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 1rem;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    align-items: center;
+  }
+  .legend-dot {
+    width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 4px;
+  }
+</style>
+<h2 class="sr-only">Spanish past tense conjugation table showing preterite and imperfect forms for all pronouns</h2>
+<div class="conj-root">
+  <div class="legend">
+    <span><span class="legend-dot" style="background:#378ADD"></span>preterite</span>
+    <span><span class="legend-dot" style="background:#639922"></span>imperfect</span>
+  </div>
+  <table class="main-table">
+    <tr>
+      <td class="pronoun">yo</td>
+      <td>
+        <table class="inner-table">
+          <tr>
+            <th>ar</th>
+            <th>er / ir</th>
+          </tr>
+          <tr>
+            <td class="pret">é</td>
+            <td class="pret">í</td>
+          </tr>
+          <tr>
+            <td class="imp">aba</td>
+            <td class="imp">ía</td>
+          </tr>
+        </table>
+      </td>
+      <td class="pronoun">tú</td>
+      <td>
+        <table class="inner-table">
+          <tr>
+            <th>ar</th>
+            <th>er / ir</th>
+          </tr>
+          <tr>
+            <td class="pret">aste</td>
+            <td class="pret">iste</td>
+          </tr>
+          <tr>
+            <td class="imp">abas</td>
+            <td class="imp">ías</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="pronoun">él</td>
+      <td>
+        <table class="inner-table">
+          <tr>
+            <th>ar</th>
+            <th>er / ir</th>
+          </tr>
+          <tr>
+            <td class="pret">ó</td>
+            <td class="pret">ió</td>
+          </tr>
+          <tr>
+            <td class="imp">aba</td>
+            <td class="imp">ía</td>
+          </tr>
+        </table>
+      </td>
+      <td class="pronoun">vosotros</td>
+      <td>
+        <table class="inner-table">
+          <tr>
+            <th>ar</th>
+            <th>er / ir</th>
+          </tr>
+          <tr>
+            <td class="pret">asteis</td>
+            <td class="pret">isteis</td>
+          </tr>
+          <tr>
+            <td class="imp">abais</td>
+            <td class="imp">íais</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="pronoun">nosotros</td>
+      <td>
+        <table class="inner-table">
+          <tr>
+            <th>ar</th>
+            <th class="er-ir">er</th>
+            <th>ir</th>
+          </tr>
+          <tr>
+            <td class="pret">amos</td>
+            <td class="pret" colspan="2">imos</td>
+          </tr>
+          <tr>
+            <td class="imp">ábamos</td>
+            <td class="imp" colspan="2">íamos</td>
+          </tr>
+        </table>
+      </td>
+      <td class="pronoun">ellos</td>
+      <td>
+        <table class="inner-table">
+          <tr>
+            <th>ar</th>
+            <th>er / ir</th>
+          </tr>
+          <tr>
+            <td class="pret">aron</td>
+            <td class="pret">ieron</td>
+          </tr>
+          <tr>
+            <td class="imp">aban</td>
+            <td class="imp">ían</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

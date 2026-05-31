@@ -1,0 +1,23 @@
+.markdown-rendered table td,
+.markdown-rendered table th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.markdown-rendered table {
+  .yellow,
+  [class='.yellow'] {
+    background-color: rgb(173, 173, 45) !important;
+    color: black !important;
+  }
+  .green,
+  [class='.green'] {
+    background-color: rgb(45, 173, 45) !important;
+    color: black !important;
+  }
+  .blue,
+  [class='.blue'] {
+    background-color: rgb(45, 45, 173) !important;
+    color: white !important;
+  }
+}
