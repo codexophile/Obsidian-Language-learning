@@ -38,6 +38,8 @@
 | ^            | infinitive                          ~.que            | <                                          | <            | <            |
 ```
 
+![[Subjunctive]]
+
 ### Irregular verbs
 
 |       |     |
