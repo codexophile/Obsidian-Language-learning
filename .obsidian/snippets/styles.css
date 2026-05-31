@@ -8,6 +8,14 @@
   th {
     border-radius: 6px; /* now works because of separate */
   }
+
+  .word {
+    background: #185fa5 !important;
+    border-color: #0c447c !important;
+    color: #e6f1fb !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
+  }
 }
 
 .markdown-rendered :is(table, th, td) {
