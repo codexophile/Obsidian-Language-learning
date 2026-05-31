@@ -1,6 +1,17 @@
+.markdown-rendered {
+  table {
+    border-collapse: separate; /* must be separate, NOT collapse */
+    border-spacing: 5px; /* controls the gap between cells */
+  }
+
+  td,
+  th {
+    border-radius: 6px; /* now works because of separate */
+  }
+}
+
 .markdown-rendered :is(table, th, td) {
   border: 1px solid;
-  border-collapse: collapse !important;
   vertical-align: middle !important;
   text-align: center !important;
 }
