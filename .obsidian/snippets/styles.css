@@ -5,6 +5,11 @@
 }
 
 .markdown-rendered table {
+  .orange,
+  [class='.orange'] {
+    background-color: rgb(173, 117, 45) !important;
+    color: white !important;
+  }
   .yellow,
   [class='.yellow'] {
     background-color: rgb(173, 173, 45) !important;
