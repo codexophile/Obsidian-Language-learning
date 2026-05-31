@@ -1,17 +1,17 @@
-|          |                |                |         |           |        |          |          |
-| -------- | -------------- | -------------- | ------- | --------- | ------ | -------- | -------- |
-| number   | person         | <              | subject | reflexive | object | <        | stressed |
-| ^        | ^              | <              | ^       | ^         | direct | indirect | ^        |
-| singular | 1<sup>st</sup> | <              | je      | me        | <      | <        | moi      |
-| ^        | 2<sup>nd</sup> | inf.           | tu      | te        | <      | <        | toi      |
-| ^        | ^              | f.             | vous    | <         | <      | <        | <        |
-| ^        | 3<sup>rd</sup> | masc.          | il      | se        | le/en  | lui/y    | lui      |
-| ^        | ^              | fem.           | elle    | ^         | la/en  | ^        | elle     |
-| ^        | ^              | indef.         | on      | ^         | en     | ^        | soi      |
-| plural   | 1<sup>st</sup> | col.           | ^       | ^         | nous   | <        | <        |
-| ^        | ^              | f.             | nous    | <         | <      | <        | <        |
-| ^        | 2<sup>nd</sup> | <              | vous    | <         | <      | <        | <        |
-| ^        | 3<sup>rd</sup> | masc. or mixed | ils     | se        | les/en | leur/y   | eux      |
-| ^        | 3<sup>rd</sup> | fem.           | elles   | ^         | ^      | ^        | elles    |
+|          |                |                |               |            |                |                |               |
+| -------- | -------------- | -------------- | ------------- | ---------- | -------------- | -------------- | ------------- |
+| number   | person         | <              | subject       | reflexive  | object         | <              | stressed      |
+| ^        | ^              | <              | ^             | ^          | direct         | indirect       | ^             |
+| singular | 1<sup>st</sup> | <              | je ~ .word    | me ~ .word | <              | <              | moi ~ .word   |
+| ^        | 2<sup>nd</sup> | inf.           | tu ~ .word    | te ~ .word | <              | <              | toi ~ .word   |
+| ^        | ^              | f.             | vous ~ .word  | <          | <              | <              | <             |
+| ^        | 3<sup>rd</sup> | masc.          | il ~ .word    | se ~ .word | le/en ~ .word  | lui/y ~ .word  | lui ~ .word   |
+| ^        | ^              | fem.           | elle ~ .word  | ^          | la/en ~ .word  | ^              | elle ~ .word  |
+| ^        | ^              | indef.         | on ~ .word    | ^          | en ~ .word     | ^              | soi ~ .word   |
+| plural   | 1<sup>st</sup> | col.           | ^             | ^          | nous ~ .word   | <              | <             |
+| ^        | ^              | f.             | nous ~ .word  | <          | <              | <              | <             |
+| ^        | 2<sup>nd</sup> | <              | vous ~ .word  | <          | <              | <              | <             |
+| ^        | 3<sup>rd</sup> | masc. or mixed | ils ~ .word   | se ~ .word | les/en ~ .word | leur/y ~ .word | eux ~ .word   |
+| ^        | 3<sup>rd</sup> | fem.           | elles ~ .word | ^          | ^              | ^              | elles ~ .word |
 
  
