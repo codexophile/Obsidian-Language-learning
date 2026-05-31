@@ -80,6 +80,10 @@
     text-align: center;
     line-height: 1.2;
     flex-shrink: 0;
+
+    img {
+      width: 100%;
+    }
   }
 
   .hiragana {
@@ -228,7 +232,9 @@
     return `
     <div class="cell">
       <span class="row-label">${ char.r }</span>
-      <div class="img-placeholder">IMG<br>${ char.r }</div>
+      <div class="img-placeholder">
+        <img src="mnemonicsImgs/${ char.r }.png" alt="${ char.r } mnemonic image">
+      </div>
       <span class="hiragana">${ char.h }</span>
       <span class="mnemonic">${ char.m }</span>
     </div>`;
