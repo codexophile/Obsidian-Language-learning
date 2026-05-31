@@ -1,5 +1,12 @@
+```sheet
+{
+
+}
+
+---
+
 |                                                 |                                                             |
-| ----------------------------------------------- | ----------------------------------------------------------- |
+| -----------------------------------------------: ~ .right-aligned | -----------------------------------------------------------|
 | a quien madruga, dios le ayuda                  | the early bird catches the worm                             |
 | cada loco con su tema                           | to each their own                                           |
 | camarón que se duerme, se lo lleva la corriente | you snooze, you lose                                        |
@@ -37,3 +44,4 @@
 | todo lo bueno se acaba                          | all good things mush come to an end                         |
 | el que espera desespera                         | a watched pot never boils                                   |
 | una olla vigilada jamás hierve                  | ^                                                           |
+```
