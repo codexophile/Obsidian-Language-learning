@@ -2,5 +2,7 @@
   "accentColor": "",
   "enabledCssSnippets": [
     "styles"
-  ]
+  ],
+  "baseFontSize": 20,
+  "textFontFamily": "Constantia"
 }
