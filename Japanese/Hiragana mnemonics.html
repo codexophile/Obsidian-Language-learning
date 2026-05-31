@@ -1,4 +1,9 @@
 <style>
+  .mnemo-character {
+    display: flex;
+    flex-direction: row;
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -232,10 +237,12 @@
     return `
     <div class="cell">
       <span class="row-label">${ char.r }</span>
-      <div class="img-placeholder">
-        <img src="mnemonicsImgs/${ char.r }.png" alt="${ char.r } mnemonic image">
+      <div class="mnemo-character">
+        <div class="img-placeholder">
+          <img src="mnemonicsImgs/${ char.r }.png" alt="${ char.r } mnemonic image">
+        </div>
+        <span class="hiragana">${ char.h }</span>
       </div>
-      <span class="hiragana">${ char.h }</span>
       <span class="mnemonic">${ char.m }</span>
     </div>`;
   }
