@@ -1,5 +1,6 @@
-.markdown-rendered table td,
-.markdown-rendered table th {
+.markdown-rendered :is(table, th, td) {
+  border: 1px solid;
+  border-collapse: collapse !important;
   vertical-align: middle !important;
   text-align: center !important;
 }
