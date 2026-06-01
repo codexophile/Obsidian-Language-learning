@@ -1,7 +1,7 @@
-| used before | <                             | determinate | <        | <         | <        | indeterminate | <        |
+|             | <                             | determinate | <        | <         | <        | indeterminate | <        |
 | ----------- | ----------------------------- | ----------- | -------- | --------- | -------- | ------------- | -------- |
-|             |                               | singular    | <        | plural    | <        |               |          |
-|             | <                             | masculine   | feminine | masculine | feminine | masculine     | feminine |
+| used before | <                             | singular    | <        | plural    | <        | singular      | <        |
+| ^           | <                             | masculine   | feminine | masculine | feminine | masculine     | feminine |
 | consonants  | z                             | lo          | la       | gli       | le       | uno           | una      |
 | ^           | s + consonant                 | ^           | ^        | ^         | ^        | ^             | ^        |
 | ^           | gn                            | ^           | ^        | ^         | ^        | ^             | ^        |
